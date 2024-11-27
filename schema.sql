@@ -19,3 +19,17 @@ CREATE TABLE `Contacts`(
 
     PRIMARY KEY(`id`)
 )
+
+-- DROP TABLE IF EXISTS 'Users';
+CREATE TABLE 'Users'(
+    'id' int NOT NULL auto_increment,
+    'firstname' VARCHAR(50) NOT NULL default '',
+    'lastname' VARCHAR(50) NOT NULL default '',
+    'password' VARCHAR(25) NOT NULL default '',
+    'email' VARCHAR(50) NOT NULL default '',
+    'role' VARCHAR(20) NOT NULL default '',
+    'created_at' DATETIME NOT NULL default CURRENT_TIMESTAMP,
+   
+    PRIMARY KEY('id')
+    
+    )
