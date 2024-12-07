@@ -1,0 +1,113 @@
+:root{
+    --bgcolor: rgb(238, 238, 238);
+    --filtercolor:rgb(65, 65, 65);
+}
+
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+header{
+    background-color: #202c34;
+    color: aliceblue;
+    font-size: 10px;
+    font-family:"Varela Round", sans-serif;
+    padding: 10px;
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+img{
+    width: auto;
+    height: 20px;
+}
+
+h1, img {
+    display: inline;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+#head{
+    justify-content: stretch;
+    padding: 30px 0px 30px 0px;
+    grid-column: 2;
+}
+button{
+    padding: 7px;
+    color: white;
+    background-color: rgb(5, 0, 73);
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    justify-content: flex-end;
+}
+#head h2, button{
+    display: inline;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto 100vh;
+    background-color: var(--bgcolor);
+
+}
+
+main{
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: left;
+    padding: 30px;
+    margin: 0px;
+    grid-row: 2;
+}
+
+aside{
+    grid-column: 1;
+    grid-row: 2;
+    padding: 30px;
+    background-color: white;
+    margin: 0px;
+    grid-row: 2;
+}
+
+#filterOp, #cust_table{
+    padding: 10px 10px 30px 10px;
+    background-color: white;
+}
+
+
+.filter{
+    display: inline;
+    justify-content: space-evenly;
+    color: var(--filtercolor);
+    padding: 5px;
+}
+
+#function{
+    font-weight: bold;
+    color: black;
+}
+
+#cust_table{
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+th{
+    background-color: var(--bgcolor);
+    padding: 7px;
+}
+
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
+
