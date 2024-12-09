@@ -47,4 +47,4 @@ CREATE TABLE `Notes`(
 
 
 INSERT INTO `Users` (id, firstname, lastname, password, email, role)
-VALUES (1,'Marcelle','Kingston', SHA2('password123', 256), 'admin@project2.com', 'Admin');
+VALUES (1,'Marcelle','Kingston','password123', 'admin@project2.com', 'Admin');

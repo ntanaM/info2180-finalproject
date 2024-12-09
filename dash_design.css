@@ -25,27 +25,40 @@ img{
     height: 20px;
 }
 
-h1, img {
+h1, #label {
     display: inline;
     vertical-align: middle;
-    padding: 10px;
+    padding: 5px;
 }
 
 #head{
-    justify-content: stretch;
-    padding: 30px 0px 30px 0px;
     grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0;
+    padding: 30px, 0px;
 }
-button{
+
+#head h2{
+    font-size: 30px;
+    
+}
+
+#head button{
     padding: 7px;
     color: white;
     background-color: rgb(5, 0, 73);
-    width: 150px;
-    height: 50px;
+    width: 120px;
+    height: 40px;
     border-radius: 5px;
     border: none;
-    justify-content: flex-end;
 }
+
+button:hover{
+    cursor: pointer;
+}
+
 #head h2, button{
     display: inline;
 }
@@ -61,7 +74,7 @@ main{
     grid-column: 2;
     grid-row: 2;
     justify-content: left;
-    padding: 30px;
+    padding: 50px;
     margin: 0px;
     grid-row: 2;
 }
@@ -72,8 +85,21 @@ aside{
     padding: 30px;
     background-color: white;
     margin: 0px;
-    grid-row: 2;
+    vertical-align: middle;
+
 }
+
+.navitext, .navicons{
+    display: inline-flex;
+    align-items: center;
+}
+
+aside > p:hover{
+    cursor: pointer;
+    background-color: var(--bgcolor);
+}
+
+
 
 #filterOp, #cust_table{
     padding: 10px 10px 30px 10px;
@@ -86,6 +112,11 @@ aside{
     justify-content: space-evenly;
     color: var(--filtercolor);
     padding: 5px;
+}
+
+.filter:hover{
+    color: skyblue;
+    cursor: pointer;
 }
 
 #function{
@@ -102,6 +133,8 @@ aside{
 th{
     background-color: var(--bgcolor);
     padding: 7px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 
