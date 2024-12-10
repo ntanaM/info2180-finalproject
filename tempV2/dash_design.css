@@ -1,0 +1,108 @@
+:root{
+    --bgcolor: rgb(238, 238, 238);
+    --filtercolor:rgb(65, 65, 65);
+}
+
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+img{
+    width: auto;
+    height: 20px;
+}
+
+#head{
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0;
+    padding: 30px, 0px;
+}
+
+#head h2{
+    font-size: 30px;
+    
+}
+
+#head button{
+    padding: 7px;
+    color: white;
+    background-color: rgb(5, 0, 73);
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#head h2, button{
+    display: inline;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto 100vh;
+    background-color: var(--bgcolor);
+}
+
+main{
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: left;
+    padding: 50px;
+    margin: 0px;
+    grid-row: 2;
+}
+
+
+.navitext, .navicons{
+    display: inline-flex;
+    align-items: center;
+}
+
+
+#filterOp, #cust_table{
+    padding: 10px 10px 30px 10px;
+    background-color: white;
+}
+
+
+.filter{
+    display: inline;
+    justify-content: space-evenly;
+    color: var(--filtercolor);
+    padding: 5px;
+}
+
+.filter:hover{
+    color: skyblue;
+    cursor: pointer;
+}
+
+#function{
+    font-weight: bold;
+    color: black;
+}
+
+#cust_table{
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+th{
+    background-color: var(--bgcolor);
+    padding: 7px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
