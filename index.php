@@ -19,14 +19,7 @@ include("functions.php");
     </head>
     <div id = "container">
     <body>
-        <div class = "header">
-            <header>
-            <div class = "Header">
-            <img src = "dolphin.png" alt = "Dolphin Logo" id = "dolphin">
-                <h1>Dolphin CRM</h1>
-            </div>
-            </header>
-        </div>
+        <?php include 'header.php';?>
 
         <div class = "main">
             <main>

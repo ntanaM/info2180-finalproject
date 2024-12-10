@@ -3,30 +3,18 @@
     font-weight: 400;
     font-style: normal;
   }
-  
-
-header{
-    background-color: #202c34;
-    color: aliceblue;
-    font-size: 10px;
-    font-family:"Varela Round", sans-serif;
-    padding: 10px;
-}
 
 img{
     width: auto;
     height: 20px;
 }
 
-.Header h1, img {
-    display: inline;
-    vertical-align: middle;
-    padding: 10px;
-}
 
 #form {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-content: center;
     margin: auto;
     font-family:"Varela Round", sans-serif;
 

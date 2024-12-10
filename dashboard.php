@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang = "en">
     <head>
         <meta charset="utf-8">
@@ -9,13 +8,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
+        <script src="dashboard.js"></script>
+
     </head>
 
     <body>
-        <header>
-            <img id = "label" src="dolphin.png" alt="Dolphin image">
-            <h1>DolphinCRM</h1>
-        </header>       
+        <?php include 'header.php';?>   
 
         <main>
             <div id = "head">
@@ -39,25 +37,46 @@
                     <th>Company</th>
                     <th>Type</th>
                 </tr>
+
+                <?php 
+                    include('connection.php');
+                    $query = $conn->query("SELECT * FROM Contacts");
+
+                    $results = mysqli_query($conn, $query);
+
+                    foreach($results as $row):?>
+                        <tr>
+                            <td>
+                                <?=$row['title']." ".$row['firstname']." ".$row['lastname'];?>
+                            </td>
+                        </tr>
+                            
+                        <tr>
+                            <td>
+                                <?=$row['email'];?>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <?=$row['company'];?>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <?=$row['type'];?>
+                            </td>
+                        </tr>
+
+                    <?php endforeach;?>
+                    
             </table>
 
         </main>
-        <aside>
-            <img class= "navicons" src="home.png" alt="Home picture">
-            <p class="navitext">Home</p>
-            <br>
 
-            <img class= "navicons" src="user.png" alt="User picture"">
-            <p class="navitext">New Contact</p>
-            <br>
-            <img class= "navicons" src = "group-user.png" alt="Group Contacts">
-            <p class="navitext">Users</p>
-
-            <hr>
-
-            <img class= "navicons" src="log-out.png" alt="Log out picture">
-            <p class="navitext">Logout</p>
-        </aside>
+        <?php include 'navbar.php';?>
+        
 
     </body>
 

@@ -54,13 +54,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     </head>
 
     <body>
-        <header>
-            <div class = "Header">
-            <img src = "dolphin.png" alt = "Dolphin Logo" id = "dolphin">
-                <h1>Dolphin CRM</h1>
-            </div>
-
-        </header>
+        <?php include 'header.php';?>
 
         <main>
             <div id = "form">
@@ -86,10 +80,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         </main>
 
         <footer>
-            <p>Copyright @ 2024 Dolphin CRM <br>References <a href="https://www.flaticon.com/free-icons/dolphin" title="dolphin icons">Dolphin icons created by Freepik - Flaticon</a></p>
-            
-            <br>
-            <a href="https://boxicons.com/" title = "Navigation Icons">Navigation Icons by Boxicons.com</a></p>
+            <p>Copyright @ 2024 Dolphin CRM <br>References <a href="https://www.flaticon.com/free-icons/dolphin" title="dolphin icons">Dolphin icons created by Freepik - Flaticon</a><a href="https://boxicons.com/" title = "Navigation Icons">   Navigation Icons by Boxicons.com</a></p>
+
         </footer>
     </body>
 
