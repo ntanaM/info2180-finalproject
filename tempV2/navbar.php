@@ -12,7 +12,7 @@
 
     <aside>
         <img class= "navicons" src="home.png" alt="Home picture">
-        <p class="navitext" href="index.php">Home</p>
+        <p class="navitext"> <a href="index.php">Home </a></p>
         <br>
 
         <img class= "navicons" src="user.png" alt="User picture"">
