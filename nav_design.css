@@ -1,0 +1,27 @@
+/* Coded by: Tara-Lee Donald */
+
+aside{
+    grid-column: 1;
+    grid-row: 2;
+    padding: 30px;
+    background-color: white;
+    margin: 0px;
+    vertical-align: middle;
+    border-right: 1px solid gray;
+}
+
+aside > a:hover{
+    cursor: pointer;
+    background-color: var(--bgcolor);
+}
+
+.navitext, .navicons{
+    display: inline-flex;
+    align-items: center;
+}
+
+aside a[href]{
+    color: black;
+    text-decoration: none;
+    margin-bottom: 20px;
+}

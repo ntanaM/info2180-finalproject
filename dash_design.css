@@ -1,0 +1,141 @@
+/* Coded by: Tara-Lee Donald */
+
+html{
+    max-width: 100%;
+}
+
+:root{
+    --bgcolor: rgb(238, 238, 238);
+    --filtercolor:rgb(65, 65, 65);
+}
+
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+img{
+    width: auto;
+    height: 20px;
+}
+
+#head{
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0;
+    padding: 30px, 0px;
+}
+
+#head h2{
+    font-size: 30px;
+    
+}
+
+#head button{
+    padding: 7px;
+    color: white;
+    background-color: rgb(5, 0, 73);
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+}
+
+#head button:hover{
+    cursor: pointer;
+}
+
+#head h2, button{
+    display: inline;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 30% 80%;
+    grid-template-rows: 7% 100vh;
+    background-color: var(--bgcolor);
+    
+}
+
+main{
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: left;
+    padding: 50px;
+    margin: 0px;
+}
+
+
+#filterOp, #result{
+    padding: 10px 10px 30px 10px;
+    background-color: white;
+}
+
+
+.filter{
+    display: inline;
+    justify-content: space-evenly;
+    color: var(--filtercolor);
+    padding: 5px;
+}
+
+.filter:hover{
+    color: skyblue;
+    cursor: pointer;
+}
+
+#function, .filter{
+    display: inline;
+}
+#function{
+    font-weight: bold;
+    color: black;
+}
+
+table{
+    width: 100%;
+    text-align: left;
+    border: none;
+    color: black;
+}
+
+th{
+    background-color: var(--bgcolor);
+    padding: 7px;
+}
+
+
+th,td{
+    border-bottom: 1px solid var(--bgcolor);
+}
+
+table a[href]{
+    text-decoration: none;
+}
+
+.email,.company{
+    color: var(--filtercolor);
+}
+
+th:first-child{
+    border-top-left-radius: 5px;
+}
+
+th:last-child{
+    border-top-right-radius: 5px;
+}
+
+td:first-child{
+    border-bottom-left-radius: 5px;
+}
+
+td:last-child{
+    border-bottom-right-radius: 5px;
+}
+
+
+
+

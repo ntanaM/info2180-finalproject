@@ -1,0 +1,24 @@
+/* Coded by: Tara-Lee Donald */
+
+header{
+    background-color: #202c34;
+    color: aliceblue;
+    font-size: 10px;
+    font-family:"Varela Round", sans-serif;
+    display: flex;
+    padding-left: 30px;
+    justify-content: left;
+    align-items: center;
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+h1, #label {
+    display: inline;
+    vertical-align: middle;
+}
+
+img{
+    width: auto;
+    height: 20px;
+}
