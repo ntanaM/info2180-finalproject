@@ -1,0 +1,178 @@
+/* Coded by: Tara-Lee Donald */
+
+
+:root{
+    --bgcolor: rgb(238, 238, 238);
+    --filtercolor:rgb(65, 65, 65);
+}
+
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+img{
+    width: auto;
+    height: 20px;
+}
+
+#profile{
+    height:100px;
+    width: auto;
+}
+
+#head{
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#assign{
+    background-color: green;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+#switch{
+    background-color: yellow;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+.subheading{
+    font-size: 15px;
+    margin: 0;
+    color: gray;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 30% 80%;
+    grid-template-rows: 7% 100vh;
+    background-color: white;
+}
+
+main{
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: left;
+    margin: 0;
+}
+
+#control, #result{
+    display: inline;
+    
+}
+
+#user{
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0;
+    padding: 30px;
+}
+
+main{
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: left;
+    display:flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 0px;
+}
+
+button{
+    vertical-align: center;
+    cursor: pointer;
+    padding: 7px;
+    
+}
+
+#userInfo{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 150px, 150px;
+    grid-template-rows: 150px, 150px;
+    vertical-align: left;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+}
+
+#userInfo label{
+    color: gray;
+}
+
+#email{
+    grid-column: 1;
+    grid-row: 1;
+    padding: 10px;
+}
+
+#company{
+    grid-column: 1;
+    grid-row: 2;
+    padding: 10px;
+}
+
+#telephone{
+    grid-column: 2;
+    grid-row: 1;
+    padding: 10px;
+}
+
+#assigned_to{
+    grid-column: 2;
+    grid-row: 2;
+    padding: 10px;
+}
+
+#notesSection{
+    background-color: white;
+    display: grid;
+    grid-template-rows: 50px, auto;
+    vertical-align: left;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+
+#notesSection h4{
+    padding-left: 30px;
+    grid-row: 1;
+}
+
+#notes{
+    grid-row: 2;
+    vertical-align: left;
+    padding-left: 10px;
+}
+
+#notes h5{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#notes p{
+    color: gray;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#noteForm{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: var(--bgcolor);
+}
+
+textarea{
+    margin-top: 15px;
+}
