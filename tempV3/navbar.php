@@ -5,7 +5,7 @@ include("connection.php"); // Include connection
 
 $link = "uauthorized.php";
 
-if($_SESSION['role'] === "Admin"){
+if($_SESSION['role'] === "Admin"){ //Checks to see if the person is an Admin then allows access to the users.php file
     $link = 'users.php';
 }
 
@@ -13,7 +13,7 @@ if($_SESSION['role'] === "Admin"){
 
 
 ?>
-
+<!--Allows user to navigate through webpage-->
 <html lang = "en">
     <head>
         <meta charset="utf-8">
@@ -28,19 +28,19 @@ if($_SESSION['role'] === "Admin"){
 
     <aside>
         <img class= "navicons" src="home.png" alt="Home picture">
-        <a href="index.php" class="navitext">Home</a>
+        <a href="index.php" class="navitext">Home</a> <!--Home-->
         <br>
 
         <img class= "navicons" src="user.png" alt="User picture">
-        <a href="contact.php" class="navitext">New Contact</a> 
+        <a href="contact.php" class="navitext">New Contact</a> <!--New Contact-->
         <br>
         <img class= "navicons" src = "group-user.png" alt="Group Contacts">
-        <a href="<?= $link ?>" class="navitext">Users</a>
+        <a href="<?= $link ?>" class="navitext">Users</a> <!--Users-->
 
 
         <hr>
 
         <img class= "navicons" src="log-out.png" alt="Log out picture">
-        <a href="logout.php" class="navitext">Logout</a>
+        <a href="logout.php" class="navitext">Logout</a> <!--Logout-->
     </aside>
 </html>

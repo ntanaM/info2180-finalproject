@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function(){
     const assignButton = document.getElementById("assign");
     const switchButton = document.getElementById("switch");
 
-    function assignListener(){
+    //Attaches assign button to notes.php
+    function assignListener(){ 
         const request = new XMLHttpRequest();
         const url = `notes.php?query=assign`;
         request.open('GET', url, true);
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
 
     }
-
+    //Attachs switch button to notes.php
     function switchListener(){
         const request = new XMLHttpRequest();
         const url = `notes.php?query=switch`;
@@ -39,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
     }
 
-    assignButton.addEventListener("click", assignListener);
-    switchButton.addEventListener("click", switchListener);
+    assignButton.addEventListener("click", assignListener); //Adds click function to assign button
+    switchButton.addEventListener("click", switchListener); //Adds click function to switch button
 
 
 

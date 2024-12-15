@@ -9,6 +9,6 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
 
-    button.addEventListener("click", newUser);
+    button.addEventListener("click", newUser); //Adds button listner to New User button
 
 });

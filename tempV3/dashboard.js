@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', (e)=>{
             types = document.querySelectorAll(".type");
 
             types.forEach(type => {
-                       
+                //Adds styling for SALES LEAD and SUPPORT 
                 if(type.textContent.toUpperCase() == "SALES LEAD"){
                     type.innerHTML = "SALES LEAD";
                     type.style.backgroundColor = "yellow";
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', (e)=>{
     }
 
 
-    button.addEventListener("click", newContact);
+    button.addEventListener("click", newContact); //Adds button listner to new contact 
 
 
     function resetStyle(click){

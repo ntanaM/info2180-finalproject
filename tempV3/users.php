@@ -2,10 +2,9 @@
 
 // Coded by: Ashle Johnson
 session_start();
-include("connection.php");
+include("connection.php"); //includes connection and functions php
 include("functions.php");
 $user_data = check_login($conn);
-
 
 ?>
 
@@ -45,8 +44,8 @@ $user_data = check_login($conn);
 
 <div id="results">
 
-     
-<table id = user_table>
+<!--Table for Users-->
+<table id = user_table> 
 
 <thead id ="head_table">
                 <tr>
@@ -59,11 +58,11 @@ $user_data = check_login($conn);
 
 <?php
                     include('connection.php');
-                    $query = "SELECT * FROM Users";
+                    $query = "SELECT * FROM Users"; //Selects all the data from Users table in database
 
                     $results = mysqli_query($conn, $query);
-
-                    foreach($results as $row):?>
+                    //displays the data of the table 
+                    foreach($results as $row):?> 
                     <tbody id="body_table">
                         <tr>
                             <td><?=$row['firstname']." ".$row['lastname'];?></td>

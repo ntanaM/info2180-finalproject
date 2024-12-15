@@ -1,10 +1,11 @@
 <?php
 // Coded by: Tara-Lee Donald
-session_start();
+session_start(); //starts session 
 
-include "connection.php";
+include "connection.php"; //includes both connections and functions php files 
 include "functions.php";
 
+/*Functionality for fitering the contact details */
 if(isset($_GET['filter'])){
     $query = strip_tags($_GET['filter']);
 }
@@ -13,7 +14,7 @@ else{
 }
 
 if($query == ''){
-    $filt = "SELECT * from Contacts";
+    $filt = "SELECT * from Contacts"; 
 
     $result = mysqli_query($conn, $filt);
 

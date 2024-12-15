@@ -10,6 +10,6 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname); // Establish connect
 
 
 if(!$conn){
-    die("Connection failed. Reason: " . mysqli_connect_error());
+    die("Connection failed. Reason: " . mysqli_connect_error()); //Shows error message if connection is failed 
 }
 

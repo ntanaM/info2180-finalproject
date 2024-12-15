@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function(){
 
-    const table = document.getElementById("result");
+    const table = document.getElementById("result"); //gets result div from html
 
 
    // Add an event listener to the table

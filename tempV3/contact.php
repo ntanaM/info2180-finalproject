@@ -10,11 +10,11 @@ $user_data = check_login($conn);
 ?>
 
 <?php
-$query = "select * from users";
-$users = mysqli_query($conn, $query);
+$query = "select * from users"; //selects users from database table 
+$users = mysqli_query($conn, $query); 
 
 if(!$users){
-    die("Failed to load users ". mysqli_error($conn));
+    die("Failed to load users ". mysqli_error($conn)); //if users not found prints error message
 }
 
 
@@ -22,7 +22,7 @@ if(!$users){
 ?>
 
 
-<?php
+<?php /* Gets the input from the form data and sanitizes it before inserting in database*/
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
     $regex = "/^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/";
@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         }
     }
     $current_user = $_SESSION['id'];
-
+    /*Checks if user data is correctly inputted*/ 
     if(!empty($fname) && !empty($lname) && !empty($email) && !empty($telephone) && !empty($company) && ctype_digit($telephone) && preg_match($regex, $email)){
 
     $stmt = $conn -> prepare("insert into contacts (title, firstname, lastname, email, telephone, company, type, assigned_to, created_by) values (?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -108,7 +108,7 @@ else{
 
 
 
-
+<!--Form fields to add a new contact-->
 <div class="userForm">
  <h2>New Contact</h2>
 
@@ -157,7 +157,7 @@ else{
         </select>
 </div>
     <div class = "input">
-        <input type = "submit" value = "Add Contact" id = "button" name = "submit">
+        <input type = "submit" value = "Add Contact" id = "button" name = "submit"> <!--Button to Add Contact given Form is completed by User -->
     </div>
 
 

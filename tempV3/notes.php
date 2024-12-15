@@ -156,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
                 </div>
 
             </div>
-
+            <!-- Notes -->
             <div id = "notesSection">
                 <h4><img src = "notes.png">Notes</h4>
                 <hr>
@@ -177,7 +177,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
                         
                 </div>
                 
-
+            <!--Place to add a note-->
             <div id = "noteForm">
                 <form method = "post">
                     <label for = "noteInput"><?php echo ("Add a note about " . $name); ?></label>

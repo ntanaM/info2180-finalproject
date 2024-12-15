@@ -3,7 +3,7 @@ namespace App\Utilities;
 include("connection.php");
 
 $query1 = $_GET['query'];
-
+//checks to see if assignment matches set id 
 if($query1){
     if($query1 === "assign"){
         $stmt = $conn -> prepare("update contacts set assigned_to = ? where id = ?");
@@ -23,7 +23,7 @@ if($query1){
         
 
     }
-
+    //changes role from Support to Sales lead and vice versa
     if($query1 ==="switch"){
         $new_type = "";
         if($type === "Support"){

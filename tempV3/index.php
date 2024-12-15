@@ -2,7 +2,7 @@
 // Coded by: Tara-Lee Donald
 session_start();
 
-include("connection.php"); // Include connection
+include("connection.php"); // Include connection and functions php
 include("functions.php");
 $user_data = check_login($conn);
 
@@ -29,13 +29,13 @@ $user_data = check_login($conn);
     <body>
         <?php include 'header.php';?>   
 
-        <main>
+        <main> 
             <div id = "head">
                 <h2>Dashboard</h2>
                 <button id = "newContact">+ Add Contact</button>
             </div>
             
-            <div id = "filterOp">
+            <div id = "filterOp"> <!--Displays filter functionality for dashboard-->
                 <img id = "filter" src="filter.png">
                 <label for = "filterOp" id="function">Filter By: </label>
 

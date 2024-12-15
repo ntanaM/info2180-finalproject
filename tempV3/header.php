@@ -4,9 +4,9 @@
 ?>
 
 <html lang = "en">
-    <head>
+    <head> <!--The header used for each page in the website-->
         <meta charset="utf-8">
-        <title>DolphinCRM</title>
+        <title>DolphinCRM</title> 
 
         <link href="header_design.css" rel = "stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">

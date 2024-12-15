@@ -3,9 +3,9 @@
 // Coded by: Dana Archer
 session_start();
 
-include("connection.php"); // Include connection
+include("connection.php"); // Include connection and functions php
 include("functions.php");
-$user_data = check_login($conn);
+$user_data = check_login($conn);  
 
 
 
@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     $regex = "/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}$/";
 
 
-
+    //Sanitizes the input from the form
     $fname = filter_var($_POST['fname'], FILTER_SANITIZE_STRING) ;
     $lname = filter_var($_POST['lname'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
@@ -24,21 +24,21 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
     
 
-    if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
+    if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){ //Checks to see if the form area is not empty before inserting in database
 
-        if(preg_match($regex, $password)){
+        if(preg_match($regex, $password)){ //Uses preg_match to ensure password is valid
 
-            $password = password_hash($password, PASSWORD_DEFAULT);
-            $stmt = $conn -> prepare("insert into users (firstname, lastname, password, email, role) values(?, ?, ?, ?, '$role')");
+            $password = password_hash($password, PASSWORD_DEFAULT); //Hashes password before placed in database
+            $stmt = $conn -> prepare("insert into users (firstname, lastname, password, email, role) values(?, ?, ?, ?, '$role')");//Inserts the form value into database
             $stmt -> bind_param('ssss', $fname, $lname, $password, $email);
     
 
             if($stmt -> execute()){ 
-                echo "<script>alert('User added successfully')</script>";
+                echo "<script>alert('User added successfully')</script>"; //Shows this alert when user is successfully added to the datavase
             }
 
             else{
-                echo "<script>alert('Could not record: ' . mysqli_error($conn)</script>";
+                echo "<script>alert('Could not record: ' . mysqli_error($conn)</script>"; //Shows alert when there is a connection error
             }
 
         }
@@ -47,13 +47,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
             echo "<script>alert('Not a valid password. Password must be at least 8 digits long, and include at least 1: lowercase letter, uppercase letter and 1 digit.')</script>";
             
-            }
+            } //Shows alert when password inputted is invalid 
 
 }
 
 
 else{
-    echo "<script>alert('All fields must be completed')</script>";
+    echo "<script>alert('All fields must be completed')</script>"; //Shows alert if one or more fields are left incomplete 
 }
 
 
@@ -89,7 +89,7 @@ else{
 
 
 
-
+<!--Form to add a new user-->
 <div class="userForm">
  <h2>New User</h2>
 
@@ -119,7 +119,7 @@ else{
         </select>
 </div>
     <div class = "input">
-        <input type = "submit" value = "Add User" id = "button" name = "submit">
+        <input type = "submit" value = "Add User" id = "button" name = "submit"> <!---Button to submit User informtation-->
     </div>
 
 
