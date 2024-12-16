@@ -64,12 +64,18 @@ button:hover {
 
 
 .box {
+    /*
     width: 750px;
-    height: 450px;
+    height: 450px;*/
+    width: 100%;
+    height: auto;
+    display: inline-block;
     border: 1px solid #cdd2dc;  
     background-color: white;
-    border-radius: 3%;
-    padding: 5%;
+    box-sizing: border-box;
+    border-radius: 1%;
+    padding: 4%;
+    
   }
 
 body{
@@ -94,10 +100,26 @@ main{
 }
 
 table {
-    width:90%;
-    padding: 3%;
+    width:100%;
+    table-layout: auto;
+    padding: 2%;
+    border-collapse: collapse;
+
 }
 
+#user_table td, #user_table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #d4d7df;
+    color: rgb(0, 0, 0);
+  }
 
 #head_table {
     background-color: rgb(224, 225, 229);
