@@ -1,4 +1,4 @@
--- Coded by: Ashle Johnson, Dana Archer, Tara-Lee Donald 
+-- Coded by: Ashle Johnson, Dana Archer, Tara-Lee Donald, Jada-Kay Williams 
 
 DROP DATABASE IF EXISTS dolphincrm;
 CREATE DATABASE dolphincrm;
