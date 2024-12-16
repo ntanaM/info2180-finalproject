@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', (e)=>{
     var sale = document.getElementById('Sales');
     var support = document.getElementById('Support');
     var assigned = document.getElementById('Assigned');
-    var php_file = "http://localhost/Dolphin/filter.php";
+    var php_file = "filter.php";
     var button = document.getElementById('newContact');
 
     function filterTable(option){
